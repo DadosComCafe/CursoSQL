@@ -17,7 +17,7 @@
 
 
 - 1FN: Remover company_name de snack;
-- 3FN: Remover dependência de transição;
+- 3FN: Remover a relação muitos para muitos;
 
 # Diagrama
 

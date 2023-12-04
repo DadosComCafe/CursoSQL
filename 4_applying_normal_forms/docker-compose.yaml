@@ -17,5 +17,6 @@ services:
       - ./sql/dml/insert_values_company.sql:/docker-entrypoint-initdb.d/D_insert_company.sql
       - ./sql/dml/insert_values_snack.sql:/docker-entrypoint-initdb.d/E_insert_snack.sql
       - ./sql/dml/insert_values_nutritional_info.sql:/docker-entrypoint-initdb.d/F_insert_values_nutritional_info.sql
+      - ./sql/normalize_tables/normalize_tables.sql:/docker-entrypoint-initdb.d/G_normalize_tables.sql
 volumes:
   postgres_volume:
