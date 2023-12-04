@@ -37,6 +37,6 @@
 |         |               |                 |                |                |
 
 ### Tabela `nutrition_details`:
-| id (PK) | nutritional_info_id (FK) | nutrient_detail | value | createdAt      | updatedAt      |
-|---------|--------------------------|---------------|----------------|----------------|----------------|
-|         |                          |               |                |                |                |
+| id | nutritional_info_id (FK) | calories | total_fat | ... |
+----------------------------------------------------------
+|    |                     |          |           |     |
