@@ -12,6 +12,31 @@
     Chaves candidatas e dependência total: Identifique as chaves candidatas (conjunto mínimo de colunas que podem identificar unicamente uma linha) e certifique-se de que todos os atributos não primários são totalmente dependentes da chave primária, eliminando dependências parciais.
 
 * __Terceira Forma Normal (3FN):__
-Estar na 2FN: A tabela precisa estar na segunda forma normal antes de avançar para a terceira. Se necessário, aplique as transformações para garantir a 2FN.
-Remover dependências transitivas: Verifique se não há dependências transitivas, ou seja, nenhum atributo não chave deve ser dependente de outro atributo não chave. Se houver, separe esses atributos em tabelas distintas.
+    Estar na 2FN: A tabela precisa estar na segunda forma normal antes de avançar para a terceira. Se necessário, aplique as transformações para garantir a 2FN.
+    Remover dependências transitivas: Verifique se não há dependências transitivas, ou seja, nenhum atributo não chave deve ser dependente de outro atributo não chave. Se houver, separe esses atributos em tabelas distintas.
 
+
+- 1FN: Remover company_name de snack;
+- 3FN: Remover dependência de transição;
+
+# Diagrama
+
+### Tabela `company`:
+| id (PK) | name       | summary | createdAt      | updatedAt      |
+|---------|------------|---------|----------------|----------------|
+|         |            |         |                |                |
+
+### Tabela `snack`:
+| id (PK) | name       | summary | id_company (FK) | createdAt      | updatedAt      |
+|---------|------------|---------|-----------------|----------------|----------------|
+|         |            |         |                 |                |                |
+
+### Tabela `nutritional_info`:
+| id (PK) | snack_id (FK) | company_id (FK) | createdAt      | updatedAt      |
+|---------|---------------|-----------------|----------------|----------------|
+|         |               |                 |                |                |
+
+### Tabela `nutrition_details`:
+| id (PK) | nutritional_info_id (FK) | nutrient_detail | value | createdAt      | updatedAt      |
+|---------|--------------------------|---------------|----------------|----------------|----------------|
+|         |                          |               |                |                |                |
